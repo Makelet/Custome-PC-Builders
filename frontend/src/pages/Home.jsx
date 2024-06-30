@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ProductCard from '../components/ProductCard'
 import axios from 'axios'
 import { useAuth } from '../Context/Context';
-import { Container, Flex, Grid, useToast } from '@chakra-ui/react';
+import { Box, Container, Flex, Grid, useToast } from '@chakra-ui/react';
 import { transform } from 'framer-motion';
 
 const Home = () => {
@@ -36,7 +36,14 @@ const Home = () => {
     }, []);
 
     return (
-        <Grid templateColumns='repeat(3, 1fr) ' rowGap={100} columnGap={30} p={20} >
+        <Flex
+            marginTop={"80px"}
+            width="100%"
+            justifyContent="center"
+            flexDir="row"
+            flexWrap="wrap"
+            gap="60px"
+        >
             {
                 allProducts?.map((item) => (
                     <ProductCard
@@ -44,10 +51,13 @@ const Home = () => {
                         productId={item.id}
                         image={item.image}
                         title={item.title}
-                        price={item.price} />
+                        price={item.price}
+                    />
                 ))
             }
-        </Grid>
+        </Flex>
+
+
     )
 }
 

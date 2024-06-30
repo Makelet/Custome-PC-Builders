@@ -34,9 +34,9 @@ const Navbar = () => {
     }
 
     return (
-        <Flex className='main_navbar' justify='space-between' align='center' p={{ base: '0 20px', md: '0 70px' }} pos={"sticky"} top={0} left={0} zIndex={10} bg={"white"}>
+        <Flex className='main_navbar' width={"100%"} justify='space-between' align='center' p={{ base: '0 20px', md: '0 70px' }} pos={"sticky"} top={0} left={0} zIndex={10} bg={"white"} boxShadow="1px 1px 30px #cbcbcb99">
             <Box className='logo'>  
-                <Image src={Logo} alt='Logo' cursor={"pointer"} onClick={() => navigate("/")} height={{ base: '50px', md: '100px' }} />
+                <Image src={Logo} alt='Logo' cursor={"pointer"} onClick={() => navigate("/")} height={{ base: '70px', md: '100px' }} />
             </Box>
             <Box className='search-bar' w={{ base: '60%', md: '30%' }}>
                 <Input type='text' placeholder='Search' />

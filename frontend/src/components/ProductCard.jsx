@@ -33,7 +33,7 @@ const ProductCard = ({ productId, image, title, price }) => {
     }
 
     return (
-        <Card maxW='sm' _hover={{ transform: 'scale(1.1)' }} transition={"all ease .5s"}>
+        <Card width={"300px"} _hover={{ transform: 'scale(1.1)' }} transition={"all ease .5s"}>
             <CardBody>
                 <Image
                     src={image}
