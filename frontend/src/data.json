@@ -1,0 +1,74 @@
+[
+    {
+        "id":1,
+        "title": "AMD Ryzen 3 3200G Processor With Radeon Graphics",
+        "price": 5690,
+        "image": "https://modxcomputers.com/wp-content/uploads/2022/03/Amd-Ryzen-3-3200G-APU.webp"
+    },
+    {
+        "id":2,
+        "title": "AMD Ryzen 3 4300G Processor With Radeon Graphics",
+        "price": 7490,
+        "image": "https://modxcomputers.com/wp-content/uploads/2023/04/AMD-Ryzen-3-4300G-Processor-With-Radeon-Graphics.webp"
+    },
+    {
+        "id":3,
+        "title": "AMD Ryzen 5 3600",
+        "price": 9990,
+        "image": "https://modxcomputers.com/wp-content/uploads/2022/02/Amd-Ryzen-5-3600-3.webp"
+    },
+    {
+        "id":4,
+        "title": "AMD Ryzen 5 5500GT Processor With Radeon Graphics",
+        "price": 11200,
+        "image": "https://modxcomputers.com/wp-content/uploads/2024/04/AMD-Ryzen-5-5500GT-Processor-With-Radeon-Graphics.webp"
+    },
+    {
+        "id":5,
+        "title": "AMD Ryzen 5 5600GT Processor With Radeon Graphics",
+        "price": 12590,
+        "image": "https://modxcomputers.com/wp-content/themes/woodmart/images/lazy.png"
+    },
+    {
+        "id":6,
+        "title": "AMD Ryzen 5 5600G Processor With Radeon Graphics",
+        "price": 12850,
+        "image": "https://modxcomputers.com/wp-content/themes/woodmart/images/lazy.png"
+    },
+    {
+        "id":7,
+        "title": "AMD Ryzen 5 5600",
+        "price": 13200,
+        "image": "https://modxcomputers.com/wp-content/themes/woodmart/images/lazy.png"
+    },
+    {
+        "id":8,
+        "title": "AMD Ryzen 5 5600X",
+        "price": 14990,
+        "image": "https://modxcomputers.com/wp-content/themes/woodmart/images/lazy.png"
+    },
+    {
+        "id":9,
+        "title": "AMD Ryzen 5 8500G Processor With Radeon Graphics",
+        "price": 17030,
+        "image": "https://modxcomputers.com/wp-content/themes/woodmart/images/lazy.png"
+    },
+    {
+        "id":10,
+        "title": "AMD Ryzen 7 5700G Processor With Radeon Graphics",
+        "price": 17090,
+        "image": "https://modxcomputers.com/wp-content/themes/woodmart/images/lazy.png"
+    },
+    {
+        "id":11,
+        "title": "AMD Ryzen 7 5700X",
+        "price": 17420,
+        "image": "https://modxcomputers.com/wp-content/themes/woodmart/images/lazy.png"
+    },
+    {
+        "id":12,
+        "title": "AMD Ryzen 5 7600 Processor With Radeon Graphics",
+        "price": 18590,
+        "image": "https://modxcomputers.com/wp-content/themes/woodmart/images/lazy.png"
+    }
+]
