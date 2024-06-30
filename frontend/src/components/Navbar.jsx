@@ -35,7 +35,7 @@ const Navbar = () => {
 
     return (
         <Flex className='main_navbar' width={"100%"} justify='space-between' align='center' p={{ base: '0 20px', md: '0 70px' }} pos={"sticky"} top={0} left={0} zIndex={10} bg={"white"} boxShadow="1px 1px 30px #cbcbcb99">
-            <Box className='logo'>  
+            <Box className='logo'>
                 <Image src={Logo} alt='Logo' cursor={"pointer"} onClick={() => navigate("/")} height={{ base: '70px', md: '100px' }} />
             </Box>
             <Box className='search-bar' w={{ base: '60%', md: '30%' }}>
@@ -107,9 +107,28 @@ const Navbar = () => {
                             </Box>
                         </Box>
                         <Flex className='icon-section' gap='20px' mt='20px'>
-                            <IconButton icon={<FaUser />} aria-label="User" />
+                            {user ?
+                                <Menu>
+                                    <MenuButton >
+                                        <IconButton _hover={{ color: "white", bg: "#ff0000" }} icon={<FaUser />} aria-label="User" />
+                                    </MenuButton>
+                                    <MenuList>
+                                        <MenuItem _hover={{ color: "white", bg: "#ff0000" }}>My Profile</MenuItem>
+                                        <MenuItem _hover={{ color: "white", bg: "#ff0000" }} onClick={logoutUser}>Logout</MenuItem>
+                                    </MenuList>
+                                </Menu>
+                                :
+                                <Menu>
+                                    <MenuButton >
+                                        <IconButton _hover={{ color: "white", bg: "#ff0000" }} icon={<FaUser />} aria-label="User" />
+                                    </MenuButton>
+                                    <MenuList>
+                                        <MenuItem onClick={() => navigate('/my-account/user')}>Login/Signup</MenuItem>
+                                    </MenuList>
+                                </Menu>
+                            }
                             <IconButton icon={<FaHeart />} aria-label="Wishlist" />
-                            <IconButton icon={<FaShoppingCart />} aria-label="Cart" />
+                            <IconButton icon={<FaShoppingCart />} onClick={() => navigate('/cart')} aria-label="Cart" />
                         </Flex>
                     </DrawerBody>
                 </DrawerContent>
