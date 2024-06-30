@@ -56,10 +56,10 @@ function CartPage() {
 
 
     return (
-
+        user &&
         <section className="container mx-auto my-3 flex w-full flex-col gap-3 px-4 ">
             {/* Mobile cart table */}
-            {user && userCartItems?.map((item) => (
+            {userCartItems?.map((item) => (
                 <div key={item._id} className="flex w-full border px-4 py-4  max-sm:flex-col max-sm:justify-center max-sm:items-center">
                     <img
                         className="self-start object-contain w-44 max-md:w-40 max-sm:w-32 max-sm:self-center"
