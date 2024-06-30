@@ -20,6 +20,13 @@ const ProductCard = ({ productId, image, title, price }) => {
     const addToCart = (pId, image, title, price) => {
 
         if (userInfo) {
+            toast({
+                title: 'Added to the Cart.',
+                status: 'success',
+                duration: 9000,
+                isClosable: true,
+                position: 'top'
+            })
             dispatch(addItems(pId, image, title, price, userInfo._id));
         } else {
             toast({
@@ -27,7 +34,7 @@ const ProductCard = ({ productId, image, title, price }) => {
                 status: 'error',
                 duration: 9000,
                 isClosable: true,
-                position:'top'
+                position: 'top'
             })
         }
     }
@@ -42,18 +49,15 @@ const ProductCard = ({ productId, image, title, price }) => {
                 />
                 <Stack mt='6' spacing='3'>
                     <Heading size='md'>{title}</Heading>
-                    <Text color='blue.600' fontSize='2xl'>
+                    <Text color='#ff0000' fontSize='2xl'>
                         ₹{price}
                     </Text>
                 </Stack>
             </CardBody>
             <Divider />
             <CardFooter>
-                <ButtonGroup spacing='2'>
-                    <Button variant='solid' colorScheme='blue'>
-                        Buy now
-                    </Button>
-                    <AddToCartBtn handleAddCart={() => addToCart(productId, image, title, price)} />
+                <ButtonGroup spacing='2' width={"100%"}>
+                    <AddToCartBtn width="100%" handleAddCart={() => addToCart(productId, image, title, price)} />
                 </ButtonGroup>
             </CardFooter>
         </Card>
