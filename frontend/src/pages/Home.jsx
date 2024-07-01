@@ -52,7 +52,7 @@ const Home = () => {
                         image={item.image}
                         title={item.title}
                         price={item.price}
-                    />
+                    />  
                 ))
             }
         </Flex>
