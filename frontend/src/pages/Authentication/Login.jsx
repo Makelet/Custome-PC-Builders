@@ -7,6 +7,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../Context/Context';
+import { useToast } from '@chakra-ui/react';
 
 const Login = () => {
     let navigate = useNavigate();
@@ -16,7 +17,7 @@ const Login = () => {
 
     let [loading, setLoading] = useState(false);
     let { URL } = useAuth();
-
+    let toast = useToast();
     const submitHandler = async () => {
         setLoading(true);
 
@@ -29,9 +30,22 @@ const Login = () => {
         try {
             let res = await axios.post(`${URL}/api/user/login`, { email, password })
             console.log(res);
-            localStorage.setItem("userInfo", JSON.stringify(res.data));
-            setLoading(false);
-            navigate("/");
+
+            if (res.data.status !== false) {
+                localStorage.setItem("userInfo", JSON.stringify(res.data));
+                setLoading(false);
+                navigate("/");
+            }
+            else {
+                toast({
+                    title: 'User Does not Exist.',
+                    status: 'error',
+                    duration: 9000,
+                    isClosable: true,
+                    position: 'top'
+                })
+                setLoading(false);
+            }
         }
         catch (e) {
             console.log(e);
